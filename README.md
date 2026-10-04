@@ -76,8 +76,9 @@ struct ContentView: View {
 | Under the Dynamic Island | On its own |
 |:---:|:---:|
 | <picture><source media="(prefers-color-scheme: dark)" srcset="assets/island-dark.gif"><img src="assets/island-light.gif" width="360" alt="The drop hanging from the Dynamic Island over a home screen, the icons bending through its glass"></picture> | <picture><source media="(prefers-color-scheme: dark)" srcset="assets/orb-dark.gif"><img src="assets/orb-light.gif" width="360" alt="The drop alone on white, its light dancing with a voice"></picture> |
-| `.siriGlass($siri)` | `SiriGlassOrb(state: $siri)` |
-| Pours out of the island over any view, wherever that view sits in the window. | Blooms from the middle of whatever frame you give it, keeping the drop's 4:3 shape. |
+
+- **`.siriGlass($siri)`** pours the drop out of the island over any view, wherever that view sits in the window.
+- **`SiriGlassOrb(state: $siri)`** blooms it from the middle of whatever frame you give it, keeping the drop's 4:3 shape.
 
 ```swift
 SiriGlassOrb(state: $siri)
