@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Builds the README's GIFs from retimed takes (record.sh, then retime.py).
 
-usage: Scripts/media.py banner <orb_60.mp4> <iphone_60.mp4> <assets-dir> [--until 6.2]
-       Scripts/media.py card <take_60.mp4> <orb|island> <assets-dir/name> [--until 9.5]
+usage: Scripts/media.py banner <orb_60.mp4> <iphone_60.mp4> <assets-dir> [--until 6.2] [--open 1.6]
+       Scripts/media.py card <take_60.mp4> <orb|island> <assets-dir/name> [--until 9.5] [--open 2.0]
 
 banner: the orb and the drop under the island side by side, from two takes
 of the same voice and cues, so the two drops pour out, listen, think and go
@@ -11,7 +11,9 @@ home together. card: one of them on its own. Each comes out twice, as
 GitHub's light and dark page colours, for a <picture> to choose between.
 
 Every take starts and ends with the drop at home, so the GIFs loop without
-a seam; --until cuts the quiet tail after it has gone home.
+a seam; --until cuts the quiet tail after it has gone home, and --open
+starts the loop that far in, so its first frame (all a still view of a GIF
+shows) has the drop out and lit rather than an empty stage.
 """
 import argparse
 import os
@@ -64,10 +66,23 @@ def border(canvas, box, radius, page):
         ImageDraw.Draw(canvas).rounded_rectangle(box, radius=radius, outline=(216, 222, 228), width=1)
 
 
-def encode(folder, out, fps=FPS):
+def rotate(folder, seconds, fps):
+    """Starts the loop `seconds` in: the frames before move to the end."""
+    names = sorted(n for n in os.listdir(folder) if n.endswith(".png"))
+    k = int(round(seconds * fps)) % max(len(names), 1)
+    if not k:
+        return
+    for i, name in enumerate(names):
+        os.rename(os.path.join(folder, name), os.path.join(folder, f"r{(i - k) % len(names):04d}.png"))
+    for i in range(len(names)):
+        os.rename(os.path.join(folder, f"r{i:04d}.png"), os.path.join(folder, f"{i:04d}.png"))
+
+
+def encode(folder, out, fps=FPS, start=0.0):
     """PNG frames to a GIF: one palette for the whole loop, ordered dither
     (it doesn't crawl where nothing moves), and only what changed stored
     per frame."""
+    rotate(folder, start, fps)
     palette = os.path.join(folder, "palette.png")
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-framerate", str(fps), "-i", os.path.join(folder, "%04d.png"),
                     "-vf", "palettegen=max_colors=256:stats_mode=full", palette], check=True)
@@ -77,7 +92,7 @@ def encode(folder, out, fps=FPS):
     print(out, f"{os.path.getsize(out) / 1e6:.1f} MB")
 
 
-def banner(orb_video, island_video, assets, until=None):
+def banner(orb_video, island_video, assets, until=None, start=0.0):
     pad, gap = 24, 24
     cw, ch = 408, 310
     radius = 40
@@ -93,11 +108,11 @@ def banner(orb_video, island_video, assets, until=None):
                     canvas.paste(c, (x, y), mask)
                     border(canvas, (x, y, x + cw - 1, y + ch - 1), radius, page)
                 canvas.save(os.path.join(folder, f"{n:04d}.png"))
-        encode(light, os.path.join(assets, "banner-light.gif"))
-        encode(dark, os.path.join(assets, "banner-dark.gif"))
+        encode(light, os.path.join(assets, "banner-light.gif"), start=start)
+        encode(dark, os.path.join(assets, "banner-dark.gif"), start=start)
 
 
-def single(video, kind, name, fps=20, until=None):
+def single(video, kind, name, fps=20, until=None, start=0.0):
     cw, ch = 480, 365
     radius = 44
     mask = rounded((cw, ch), radius)
@@ -109,8 +124,8 @@ def single(video, kind, name, fps=20, until=None):
                 canvas.paste(c, (0, 0), mask)
                 border(canvas, (0, 0, cw - 1, ch - 1), radius, page)
                 canvas.save(os.path.join(folder, f"{n:04d}.png"))
-        encode(light, f"{name}-light.gif", fps)
-        encode(dark, f"{name}-dark.gif", fps)
+        encode(light, f"{name}-light.gif", fps, start)
+        encode(dark, f"{name}-dark.gif", fps, start)
 
 
 def main():
@@ -121,16 +136,18 @@ def main():
     b.add_argument("island")
     b.add_argument("assets")
     b.add_argument("--until", type=float)
+    b.add_argument("--open", type=float, default=0.0)
     c = sub.add_parser("card")
     c.add_argument("video")
     c.add_argument("kind", choices=CROPS)
     c.add_argument("name")
     c.add_argument("--until", type=float)
+    c.add_argument("--open", type=float, default=0.0)
     args = ap.parse_args()
     if args.what == "banner":
-        banner(args.orb, args.island, args.assets, args.until)
+        banner(args.orb, args.island, args.assets, args.until, getattr(args, "open"))
     else:
-        single(args.video, args.kind, args.name, until=args.until)
+        single(args.video, args.kind, args.name, until=args.until, start=getattr(args, "open"))
 
 
 if __name__ == "__main__":
