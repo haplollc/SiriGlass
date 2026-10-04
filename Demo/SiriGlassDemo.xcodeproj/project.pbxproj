@@ -1,0 +1,384 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4442397F5AAE907A23821977 /* SiriGlass in Frameworks */ = {isa = PBXBuildFile; productRef = D3EE07D3FDCEE7B8D88C0E4B /* SiriGlass */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6DCFE55E13ECE029A9EBF1FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51FC9A41B3DBA0E0AED1EC86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF39CCC3A2FB15D497B0A9C5;
+			remoteInfo = SiriGlassDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1C3704356E856DF2DFEBDDFD /* SiriGlassDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiriGlassDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6309C9F85E35DECAD76F1892 /* SiriGlassDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SiriGlassDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		5E6DF53BBEF55BAE58E42857 /* SiriGlassDemo */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SiriGlassDemo;
+			sourceTree = "<group>";
+		};
+		898EB2FF6D57BB2DB8E63D6D /* SiriGlassDemoUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SiriGlassDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		41C0398E524D10DB44951224 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4442397F5AAE907A23821977 /* SiriGlass in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9B976A556883178E319A8A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B154E6F7382017802F2E1668 = {
+			isa = PBXGroup;
+			children = (
+				5E6DF53BBEF55BAE58E42857 /* SiriGlassDemo */,
+				898EB2FF6D57BB2DB8E63D6D /* SiriGlassDemoUITests */,
+				AD72274D1505BCA32A970E89 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AD72274D1505BCA32A970E89 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1C3704356E856DF2DFEBDDFD /* SiriGlassDemo.app */,
+				6309C9F85E35DECAD76F1892 /* SiriGlassDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF39CCC3A2FB15D497B0A9C5 /* SiriGlassDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5A1827667EF0D48E9E8E646 /* Build configuration list for PBXNativeTarget "SiriGlassDemo" */;
+			buildPhases = (
+				8AB7EC694306DBC17E89827D /* Sources */,
+				41C0398E524D10DB44951224 /* Frameworks */,
+				00006B86D739ECF775142A30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				5E6DF53BBEF55BAE58E42857 /* SiriGlassDemo */,
+			);
+			name = SiriGlassDemo;
+			packageProductDependencies = (
+				D3EE07D3FDCEE7B8D88C0E4B /* SiriGlass */,
+			);
+			productName = SiriGlassDemo;
+			productReference = 1C3704356E856DF2DFEBDDFD /* SiriGlassDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8417919629CB0D71603BA5B5 /* SiriGlassDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 907C28550CC1DB0544A316F2 /* Build configuration list for PBXNativeTarget "SiriGlassDemoUITests" */;
+			buildPhases = (
+				ACE326D3A98553DEDD44960C /* Sources */,
+				F9B976A556883178E319A8A8 /* Frameworks */,
+				7C1AA399AEEEEFE84F818522 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D1FC8A407E809A2ED7C880A /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				898EB2FF6D57BB2DB8E63D6D /* SiriGlassDemoUITests */,
+			);
+			name = SiriGlassDemoUITests;
+			packageProductDependencies = (
+			);
+			productName = SiriGlassDemoUITests;
+			productReference = 6309C9F85E35DECAD76F1892 /* SiriGlassDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		51FC9A41B3DBA0E0AED1EC86 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					DF39CCC3A2FB15D497B0A9C5 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+					8417919629CB0D71603BA5B5 = {
+						CreatedOnToolsVersion = 26.0;
+						TestTargetID = DF39CCC3A2FB15D497B0A9C5;
+					};
+				};
+			};
+			buildConfigurationList = F65566B0225EA5D79141238C /* Build configuration list for PBXProject "SiriGlassDemo" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B154E6F7382017802F2E1668;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				4AC5957938933B80896452E7 /* XCLocalSwiftPackageReference ".." */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = AD72274D1505BCA32A970E89 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF39CCC3A2FB15D497B0A9C5 /* SiriGlassDemo */,
+				8417919629CB0D71603BA5B5 /* SiriGlassDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00006B86D739ECF775142A30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C1AA399AEEEEFE84F818522 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8AB7EC694306DBC17E89827D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACE326D3A98553DEDD44960C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D1FC8A407E809A2ED7C880A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF39CCC3A2FB15D497B0A9C5 /* SiriGlassDemo */;
+			targetProxy = 6DCFE55E13ECE029A9EBF1FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0C4CDAA9FD19E9215F5A00E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				SDKROOT = iphoneos;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		09B58936EC393E6016E59D9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				SDKROOT = iphoneos;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9FA3AEE4DA0B0B676988763 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Siri Glass";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Siri Glass listens to your voice so the light in the drop can move with it. Nothing is recorded or sent anywhere.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haplo.SiriGlassDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		724F3F2896662D77C30DD8CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Siri Glass";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Siri Glass listens to your voice so the light in the drop can move with it. Nothing is recorded or sent anywhere.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haplo.SiriGlassDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		0E44927A68ABF3602E3D6F1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haplo.SiriGlassDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = SiriGlassDemo;
+			};
+			name = Debug;
+		};
+		A41846A3F181A7ADFE48F8E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haplo.SiriGlassDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = SiriGlassDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F65566B0225EA5D79141238C /* Build configuration list for PBXProject "SiriGlassDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C4CDAA9FD19E9215F5A00E2 /* Debug */,
+				09B58936EC393E6016E59D9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5A1827667EF0D48E9E8E646 /* Build configuration list for PBXNativeTarget "SiriGlassDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9FA3AEE4DA0B0B676988763 /* Debug */,
+				724F3F2896662D77C30DD8CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		907C28550CC1DB0544A316F2 /* Build configuration list for PBXNativeTarget "SiriGlassDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E44927A68ABF3602E3D6F1D /* Debug */,
+				A41846A3F181A7ADFE48F8E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		4AC5957938933B80896452E7 /* XCLocalSwiftPackageReference ".." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ..;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D3EE07D3FDCEE7B8D88C0E4B /* SiriGlass */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SiriGlass;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 51FC9A41B3DBA0E0AED1EC86 /* Project object */;
+}
