@@ -18,6 +18,7 @@
   <img src="https://img.shields.io/badge/Liquid%20Glass-iOS%2026+-5AC8FA?logo=apple&logoColor=white" alt="Liquid Glass on iOS 26+" />
   <img src="https://img.shields.io/badge/SPM-compatible-brightgreen" alt="Swift Package Manager" />
   <img src="https://img.shields.io/badge/License-MIT-blue" alt="MIT License" />
+  <a href="https://buymeacoffee.com/jcbuilds"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?logo=buymeacoffee&logoColor=black" alt="Buy Me a Coffee" /></a>
 </p>
 
 ---
