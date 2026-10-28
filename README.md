@@ -1,3 +1,6 @@
+# SiriGlass
+The Siri drop from iOS 27, for SwiftUI: Liquid Glass that pours out of the Dynamic Island and lights up with your voice, in one modifier.
+
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.gif">
@@ -5,19 +8,13 @@
   </picture>
 </p>
 
-<h1 align="center">SiriGlass</h1>
-
-<p align="center">
-  The Siri drop from iOS 27, for your own app.<br />
-  Liquid Glass that pours out of the Dynamic Island, listens, and lights up with your voice.
-</p>
-
 <p align="center">
   <img src="https://img.shields.io/badge/Swift-6-F05138?logo=swift&logoColor=white" alt="Swift 6" />
   <img src="https://img.shields.io/badge/iOS-17+-000000?logo=apple&logoColor=white" alt="iOS 17+" />
   <img src="https://img.shields.io/badge/Liquid%20Glass-iOS%2026+-5AC8FA?logo=apple&logoColor=white" alt="Liquid Glass on iOS 26+" />
   <img src="https://img.shields.io/badge/SPM-compatible-brightgreen" alt="Swift Package Manager" />
-  <img src="https://img.shields.io/badge/License-MIT-blue" alt="MIT License" />
+  [![GitHub stars](https://img.shields.io/github/stars/haplollc/SiriGlass?style=flat)](https://github.com/haplollc/SiriGlass/stargazers)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 </p>
 
 <p align="center">
@@ -26,11 +23,25 @@
   <sub>If SiriGlass is useful to you, a coffee keeps it going.</sub>
 </p>
 
----
+**Install**
 
 ```swift
-.siriGlass($siri)
+dependencies: [
+    .package(url: "https://github.com/haplollc/SiriGlass", from: "1.0.0")
+]
 ```
+
+**Try it**
+
+```swift
+SiriGlassOrb(state: $siri)
+    .frame(width: 320, height: 240)
+    .onTapGesture { siri = siri == .idle ? .listening : .idle }
+```
+
+If this is useful, a star helps others find it.
+
+---
 
 That is the whole integration. Set `siri` to `.listening` and a drop of glass drips out of the Dynamic Island, hangs there, and lights up with the microphone: loud words swell the light, vowels and consonants move different strands of it. A beat after you stop talking it gathers itself up and thinks. Set it back to `.idle` and it slips home. The glass is the system's own Liquid Glass, so whatever your app shows underneath bends through it, live.
 
@@ -261,3 +272,19 @@ Siri, Dynamic Island and Liquid Glass are trademarks of Apple Inc. SiriGlass is 
 SiriGlass is available under the [MIT license](LICENSE).
 
 Made by [Haplo LLC](https://haploapp.com).
+---
+
+## More from Haplo
+
+More open source from [Haplo](https://github.com/haplollc), built by the same solo developer:
+
+- [ThinkingOrbs](https://github.com/haplollc/ThinkingOrbs): dotted, honestly-3D loading indicators for AI and agent interfaces in SwiftUI. Nine hand-tuned designs, two tuned sizes.
+- [Minted](https://github.com/haplollc/Minted): turn any SVG into a physically-lit 3D gold medallion for SwiftUI.
+- [Vesalius](https://github.com/haplollc/Vesalius): a map of your codebase for Claude Code, an on-device code graph with an MCP server, a CLI, a Mac app and a VS Code extension.
+- [MuscleMapKit](https://github.com/haplollc/MuscleMapKit): interactive 3D muscle map for iOS. Shade muscles by how hard they were worked, spin the body, tap a group.
+- [ProcessingField](https://github.com/haplollc/ProcessingField): a SwiftUI progress field, a grid of marks whose sizes describe one soft shape that drifts, folds and breathes while your app is busy.
+- [Gepetto](https://github.com/haplollc/Gepetto): a browser agent for iOS and macOS that a person can take over at any time. Real WKWebView, small on-device models, a native SwiftUI panel.
+- [ClayGlobe](https://github.com/haplollc/ClayGlobe): a claymorphic 3D globe for SwiftUI that plants a waving flag on every country you visit.
+- [Mirage](https://github.com/haplollc/Mirage): one-stop on-device diffusion image-generation engine for iOS / macOS / visionOS.
+- [Scrubbers](https://github.com/haplollc/Scrubbers): twelve sliders you will want to touch, for SwiftUI. One view, one enum.
+- [KoiPond](https://github.com/haplollc/KoiPond): a living koi pond for SwiftUI. Koi glide over any view, lily pads drift on top, and a Metal shader ripples and refracts it all.
