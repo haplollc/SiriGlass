@@ -272,6 +272,7 @@ Siri, Dynamic Island and Liquid Glass are trademarks of Apple Inc. SiriGlass is 
 SiriGlass is available under the [MIT license](LICENSE).
 
 Made by [Haplo LLC](https://haploapp.com).
+
 ---
 
 ## More from Haplo
